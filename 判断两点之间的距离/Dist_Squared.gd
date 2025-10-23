@@ -1,7 +1,7 @@
 #每一帧运行
 func _process(delta: float) -> void:
   #获取玩家位置
-  var player_position = get_direction_to_palyer()
+  var player_node = get_tree().get_first_node_in_group("player") as Node2D
   #或者本身节点位置
   var enemy_position = position
   #获取本节点与玩家之间的距离
